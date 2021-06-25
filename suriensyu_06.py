@@ -21,7 +21,7 @@ M = a**3*(g01**2+g11**2+h11**2)**0.5
 sita0 = (g11**2+h11**2)**0.5 / g01
 ramda0 = h11/ g11
 
-
+print(M[0])
 
 fig1 = plt.figure()
 fig2 = plt.figure()
@@ -34,6 +34,15 @@ ax2.plot(year, sita0)
 ax3.plot(year, ramda0)
 ax1.set_xlabel('year')
 ax2.set_xlabel('year')
-ax1.set_ylabel('M')
+ax1.set_ylabel('M(10e27)')
+ax2.set_ylabel('tan')
+ax3.set_ylabel('tan')
+ax1.set_title("Time variation of dipole moment")
+ax2.set_title("Time variation of axis direction")
+ax3.set_title("Time variation of axis direction")
+
+fig1.savefig("01.png")
+fig2.savefig("02.png")
+fig3.savefig("03.png")
 # ax.set_ylim(0, 2)
 plt.show()
